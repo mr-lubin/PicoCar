@@ -35,6 +35,26 @@ class Car:
             self.right.reverse(80)
         sleep(time)
 
+    def turn_right(self, time=0):
+        """Turn left for specified time"""
+        if self.forward:
+            self.left.forward(80)
+            self.right.forward(50)
+        else:
+            self.left.reverse(80)
+            self.right.reverse(50)
+        sleep(time)
+
+    def spin_left(self, time=0):
+        self.left.reverse(75)
+        self.right.forward(75)
+        sleep(time)
+
+    def spin_right(self, time=0):
+        self.left.forward(75)
+        self.right.reverse(75)
+        sleep(time)
+
     def stop(self):
         """Stop car and wait one second"""
         self.left.stop()
