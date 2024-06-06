@@ -66,15 +66,14 @@ class Car:
         self.right.stop()
         sleep(1)
 
-    def set_power(self, power):
+    def set_power(self, power=None):
         """Validates parameter and sets power.
         If no power given returns current power"""
         if power:
-            print('setting power')
             if power < 0:
                 self.power = 0
             elif power < 100:
-                self.power = 100
+                self.power = power
             else:
                 self.power = 100
         else:
