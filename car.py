@@ -67,6 +67,8 @@ class Car:
         sleep(1)
 
     def set_power(self, power):
+        """Validates parameter and sets power.
+        If no power given returns current power"""
         if power:
             if power < 0:
                 self.power = 0
