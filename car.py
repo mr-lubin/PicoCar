@@ -75,7 +75,7 @@ class Car:
             elif power < 100:
                 self.power = 100
             else:
-                power = 100
+                self.power = 100
         else:
             return self.power
 
