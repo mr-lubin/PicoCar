@@ -66,6 +66,17 @@ class Car:
         self.right.stop()
         sleep(1)
 
+    def set_power(self, power):
+        if power:
+            if power < 0:
+                self.power = 0
+            elif power < 100:
+                self.power = 100
+            else:
+                power = 100
+        else:
+            return self.power
+
     def forward(self):
         """Set direction to forward"""
         self.going_forward = True
