@@ -50,14 +50,14 @@ class Car:
 
     def spin_cw(self, time=0):
         """Rotate clockwise in place"""
-        self.left.forward(self.power * 75)
-        self.right.reverse(self.power * 75)
+        self.left.forward(self.power * 0.75)
+        self.right.reverse(self.power * 0.75)
         sleep(time)
 
     def spin_countercw(self, time=0):
         """Rotate counterclockwise in place"""
-        self.left.reverse(self.power * 75)
-        self.right.forward(self.power * 75)
+        self.left.reverse(self.power * 0.75)
+        self.right.forward(self.power * 0.75)
         sleep(time)
 
     def stop(self):
