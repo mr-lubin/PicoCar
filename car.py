@@ -31,33 +31,33 @@ class Car:
     def turn_left(self, time=0):
         """Turn left for specified time"""
         if self.going_forward:
-            self.left.forward(self.power * 0.5)
-            self.right.forward(self.power * 0.8)
+            self.left.forward(int(self.power * 0.5))
+            self.right.forward(int(self.power * 0.8))
         else:
-            self.left.reverse(self.power * 0.5)
-            self.right.reverse(self.power * 0.8)
+            self.left.reverse(int(self.power * 0.5))
+            self.right.reverse(int(self.power * 0.8))
         sleep(time)
 
     def turn_right(self, time=0):
         """Turn left for specified time"""
         if self.going_forward:
-            self.left.forward(self.power * 0.8)
-            self.right.forward(self.power * 0.5)
+            self.left.forward(int(self.power * 0.8))
+            self.right.forward(int(self.power * 0.5))
         else:
-            self.left.reverse(self.power * 0.8)
-            self.right.reverse(self.power * 0.5)
+            self.left.reverse(int(self.power * 0.8))
+            self.right.reverse(int(self.power * 0.5))
         sleep(time)
 
     def spin_cw(self, time=0):
         """Rotate clockwise in place"""
-        self.left.forward(self.power * 0.75)
-        self.right.reverse(self.power * 0.75)
+        self.left.forward(int(self.power * 0.75))
+        self.right.reverse(int(self.power * 0.75))
         sleep(time)
 
     def spin_countercw(self, time=0):
         """Rotate counterclockwise in place"""
-        self.left.reverse(self.power * 0.75)
-        self.right.forward(self.power * 0.75)
+        self.left.reverse(int(self.power * 0.75))
+        self.right.forward(int(self.power * 0.75))
         sleep(time)
 
     def stop(self):
